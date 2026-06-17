@@ -17,5 +17,15 @@
     <ul>
         <li ng-repeat="student in students">{{students}}</li>
     </ul>
+    <clg></clg>
+    <h1>currency filter</h1>
+    <p>{{currencyamount | currency}}</p>
+    <h1>Today</h1>
+    <p>{{today | date:"dd-MM-yyyy"}}</p>
+    <h1>Search Filter</h1>
+    <input type="text" ng-model="search" placeholder="Search student">
+    <ul>
+        <li ng-repeat="student in students | filter:search">{{student}}</li>
+    </ul>
 </body>
 </html>
